@@ -1,0 +1,294 @@
+/*
+    Los comentarios con "---" son cada seccion de la paguina
+    y  los que no tienen nada, son cada parte interna de esa 
+    seccion, como titulo y la barra de navegacion.
+*/
+
+/*---encabezado---*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+nav.barraDeNavergacion {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-between;
+    padding: 3px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: none;
+    transition: 0.25s ease;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav li {
+    text-decoration: none;
+    margin: 0 0.75em 0 0.75em;
+}
+
+nav:hover a:hover {
+    color: red;
+    box-shadow: 0 2px 0 0 currentColor;
+}
+
+/*---Barra de busqueda, filtro y usuario---*/
+.barraBusquedaFiltros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+/*filtros*/
+.filter-container {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.fa-bars {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.filter-options {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.filter-options label {
+    display: block;
+    width: auto;
+    cursor: pointer;
+}
+
+.filter-options button {
+    display: inline-block;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.filter-container.active .filter-options {
+    display: inline-block;
+}
+
+/*Precios*/
+.precio {
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/*macotas*/
+.icono-Mascotas {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.icono-Mascotas input[type="checkbox"] {
+    display: none;
+}
+
+.icono-Mascotas .fa-paw {
+    position: relative;
+}
+
+.icono-Mascotas input[type="checkbox"]:checked~.fa-ban {
+    display: block;
+}
+
+.icono-Mascotas .fa-ban {
+    color: red;
+    position: absolute;
+    top: 49%;
+    left: 9.17%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 22px;
+}
+
+.icono-Mascotas .fa-ban:hover {
+    cursor: pointer;
+}
+
+/*Personas*/
+.maxPersonas {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/*Habitaciones*/
+.maxHabitaciones {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/*Habitaciones y maxPersonas*/
+.filter-options input[type="number"] {
+    max-width: 50%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.filter-container.active .filter-options {
+    display: block;
+}
+
+/*Opcion 2*/
+.opcion2 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/*Boton de buscar filtros*/
+.btnBuscarFiltro {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+}
+
+/*barra de busqueda*/
+.barraBusqueda-box {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.barraBusqueda-box input[type="text"] {
+    border: none;
+    padding: 8px 10px;
+    flex-grow: 1;
+    outline: none;
+    width: 500px;
+    min-width: auto;
+}
+
+.btnBuscar {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.usuario {
+    padding: 0px 20px;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.usuario .fa-user {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/*---Publicaciones---*/
+.publicaciones {
+}
+
+.container-publicaciones {
+    margin: 10px;
+    width: auto;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.publicacion {
+    margin: 0.5%;
+    font-size: 24px;
+    width: 250px;
+    height: 300px;
+}
+
+.publicacion img {
+    width: 250px;
+    height: 200px;
+}
+
+.publicacion .tituloDepartamento{
+    display: block;
+    margin: 2%;
+    font-size: 20px;
+}
+
+.publicacion .precioPublicacion{
+    display: block;
+    margin: 2%;
+    font-size: 20px;
+}
+
+/*---Pie de pagina---*/
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

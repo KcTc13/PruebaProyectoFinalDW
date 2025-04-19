@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Indexstyles.css">
+    <link rel="stylesheet" href="icons/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="css/diseñoTemp.css">
+    <title>Pagina de renta de departamentos</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Pagina de renta de departamentos</h1>
+        <nav class="barraDeNavergacion">
+            <li><a href="#">Iniciar sesion</a></li>
+            <li><a href="#">Registrarse</a></li>
+            <li><a href="#">Contanto</a></li>
+        </nav>
+    </header>
+    <!--Pruebas-->
+
+    <!--Pruebas-->
+
+    <section class="barraBusquedaFiltros">
+        <div class="barrasFiltros">
+            <div class="filter-container" id="filterContainer">
+                <button class="fa-solid fa-bars" onclick="toggleFilters()"></button>
+                <div class="filter-options">
+                    <label for="precio" class="precio">Rango de precios:
+                        <label for="minPrecio" class="minPrecio">Minimo:</label>
+                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 2000">
+
+                        <label for="maxPrecio" class="maxPrecio">Maximo:</label>
+                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 10000">
+                    </label>
+
+
+                    <label class="icono-Mascotas">
+                        <input type="checkbox" id="permitirMascotas" />
+                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-ban"></i>
+                        Mascotas
+                    </label>
+
+                    <label for="maxPersonas" class="maxPersonas">Personas:
+                        <input type="number" id="maxpersonas" name="maxpersonas" min="1" placeholder="Ej: 2"></label>
+
+                    <label class="opcion2"><input type="checkbox"> Opción 2</label>
+
+                    <label for="habitaciones" class="maxHabitaciones">Habitaciones:
+                        <input type="number" id="habitaciones" name="habitaciones" min="1" placeholder="Ej: 3"></label>
+
+                    <button class="btnBuscarFiltro">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <script>
+                function toggleFilters() {
+                    const container = document.getElementById("filterContainer");
+                    container.classList.toggle("active");
+                }
+
+                // Cierra los filtros si haces clic fuera
+                document.addEventListener('click', function (event) {
+                    const container = document.getElementById("filterContainer");
+                    if (!container.contains(event.target)) {
+                        container.classList.remove("active");
+                    }
+                });
+            </script>
+        </div>
+
+        <div class="barraBusqueda-box">
+            <input type="text" placeholder="Tu nuevo cuarto en...">
+            <button class="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="usuario">
+            <button class="fa-solid fa-user"></button>
+        </div>
+    </section>
+
+    <section class="publicaciones">
+        <p>Aqui mostraremos las imagenes de las publicaciones...</p>
+        <div class="container-publicaciones">
+            <div class="publicacion">
+                <img src="img/departamento1.jpeg" alt="Imagen del departamento 1">
+                <div class="contenidoPublicacion">
+                    <h3>Departamento 1</h3>
+                    <p>Breve descripcion de la publicacion</p>
+                    <p class="precio">$5,500</p>
+                    <ul class="icionosCaracteristicasDepartamento">
+                        <li>
+                            <img class="icono" src="img/icono_dormitorio.svg"
+                                alt="Icono para represntar cantidad de dormitorios">
+                                <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" src="img/icono_estacionamiento.svg"
+                                alt="Icono para represntar cantidad de estacionamientos">
+                                <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" src="img/icono_wc.svg"
+                                alt="Icono para represntar cantidad de baños">
+                                <p>3</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publicacion"></div>
+            <div class="publicacion"></div>
+            <div class="publicacion"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Derechos reservados por creadores: Celis Cervantes, Amaya Amaya</p>
+    </footer>
+</body>
+
+</html>
