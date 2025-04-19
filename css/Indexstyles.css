@@ -4,6 +4,109 @@
     seccion, como titulo y la barra de navegacion.
 */
 
+/*General*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8
+}
+
+p {
+    color: #000;
+    font-size: 2rem
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto
+}
+
+a {
+    text-decoration: none
+}
+
+img,
+picture {
+    width: 100%;
+    display: block
+}
+
+h1,
+h2,
+h3 {
+    font-family: Lato, sans-serif;
+    margin: 2.5rem 0;
+    font-weight: 300;
+    text-align: center
+}
+
+h1 {
+    font-size: 3.8rem
+}
+
+h2 {
+    font-size: 3.4rem
+}
+
+h3 {
+    font-size: 3rem
+}
+
+h4 {
+    font-size: 2.6rem
+}
+
+.seccion {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem
+}
+
+.boton-amarillo {
+    background-color: #e08709;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    display: inline-block;
+    border: none
+}
+
+.boton-amarillo:hover {
+    background-color: #c77808;
+    cursor: pointer
+}
+
+.boton-amarillo-block {
+    background-color: #e08709;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    display: block;
+    border: none
+}
+
+.boton-amarillo-block:hover {
+    background-color: #c77808;
+    cursor: pointer
+}
+
 /*---encabezado---*/
 header {
     display: flex;
@@ -25,12 +128,7 @@ nav.barraDeNavergacion {
     font-size: 12px;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-    text-transform: none;
-    transition: 0.25s ease;
-}
+
 
 nav {
     display: flex;
@@ -247,42 +345,60 @@ nav:hover a:hover {
 }
 
 /*---Publicaciones---*/
+@media (min-width:768px) {
+    .contenedorPublicaciones {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
 .publicaciones {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto
 }
 
-.container-publicaciones {
-    margin: 10px;
-    width: auto;
-    padding: 10px;
-    height: auto;
+.publicaciones {
+    background-color: #eee;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 2rem
+}
+
+.publicaciones .contenedorPublicaciones {
+    padding: 2rem;
+}
+
+.publicaciones h3,
+.publicaciones p {
+    margin: 0;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+    font-size: 3rem
+}
+
+.icionosCaracteristicasDepartamento {
     display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    max-width: 40rem
 }
 
-.publicacion {
-    margin: 0.5%;
-    font-size: 24px;
-    width: 250px;
-    height: 300px;
+.icionosCaracteristicasDepartamento li {
+    flex: 1;
+    display: flex
 }
 
-.publicacion img {
-    width: 250px;
-    height: 200px;
+.icionosCaracteristicasDepartamento li img {
+    flex: 0 0 3rem;
+    margin-right: 1rem
 }
 
-.publicacion .tituloDepartamento{
-    display: block;
-    margin: 2%;
-    font-size: 20px;
-}
-
-.publicacion .precioPublicacion{
-    display: block;
-    margin: 2%;
-    font-size: 20px;
+.icionosCaracteristicasDepartamento li p {
+    font-weight: 900
 }
 
 /*---Pie de pagina---*/
