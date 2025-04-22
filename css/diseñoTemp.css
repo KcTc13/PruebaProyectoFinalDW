@@ -11,10 +11,14 @@ nav.barraDeNavergacion {
     background-color: #a8a6a6;
 }
 
-.container-publicaciones {
+.contenedor {
     border: 5px solid red;
 }
 
 .publicacion {
     border: 5px solid green;
+}
+
+footer{
+    background-color: #a8a6a6;
 }
