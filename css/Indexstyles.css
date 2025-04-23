@@ -4,57 +4,389 @@
     seccion, como titulo y la barra de navegacion.
 */
 
-/*---encabezado---*/
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 0 20px;
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+
+/*General*/
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
 }
 
 h1 {
-    margin: 10px;
+    font-size: 2em;
+    margin: .67em 0
 }
 
-nav.barraDeNavergacion {
-    display: flex;
-    min-width: 100px;
-    justify-content: space-between;
-    padding: 3px;
-    font-size: 12px;
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 80%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+icono
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+[hidden],
+template {
+    display: none
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8
+}
+
+p {
+    color: #000;
+    font-size: 2rem
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto
 }
 
 a {
     text-decoration: none;
-    color: #000000;
-    text-transform: none;
-    transition: 0.25s ease;
+    color: black;
 }
 
-nav {
+img,
+picture {
+    width: 100%;
+    display: block
+}
+
+h1,
+h2,
+h3 {
+    font-family: Lato, sans-serif;
+    margin: 2.5rem 0;
+    font-weight: 300;
+    text-align: center
+}
+
+h1 {
+    font-size: 3.8rem
+}
+
+h2 {
+    font-size: 3.4rem
+}
+
+h3 {
+    font-size: 3rem
+}
+
+h4 {
+    font-size: 2.6rem
+}
+
+.seccion {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem
+}
+
+.contenido-centrado{
+    max-width: 80rem
+}
+
+.alinear-derecha {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+    justify-content: flex-end
 }
 
-nav li {
+/*---encabezado dos---*/
+.header {
+    background-color: #333;
+    padding: 1rem 0 3rem
+}
+
+
+@media (min-width:768px) {
+    .header.inicio,
+    .header.inicio .contenido-header {
+        min-height: 70rem
+    }
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-header h1 {
+    text-align: left;
+    color: #fff;
+    font-weight: 700;
+    line-height: 2;
+    max-width: 60rem;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+@media (min-width:768px) {
+    .derecha {
+        align-items: flex-end
+    }
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+@media (min-width:768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end
+    }
+}
+
+.navegacion {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear
+}
+
+@media (min-width:768px) {
+    .navegacion {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+.navegacion a {
+    color: #fff;
     text-decoration: none;
-    margin: 0 0.75em 0 0.75em;
+    font-size: 2.2rem;
+    display: block;
+    text-align: center;
 }
 
-nav:hover a:hover {
+@media (min-width:768px) {
+    .navegacion a {
+        margin-right: 2rem;
+        font-size: 1.8rem
+    }
+
+    .navegacion a:last-of-type {
+        margin-right: 0
+    }
+}
+
+.navegacion a:hover{
     color: red;
-    box-shadow: 0 2px 0 0 currentColor;
+}
+
+@media (min-width:768px) {
+    .movilMenu {
+        display: none
+    }
+}
+
+.movilMenu img {
+    width: 5rem;
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
 
 /*---Barra de busqueda, filtro y usuario---*/
 .barraBusquedaFiltros {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    /*display: flex;
     align-items: center;
     padding: 10px 20px;
     margin: 0px;
+    gap: 10px;*/
 }
 
 /*filtros*/
@@ -73,6 +405,14 @@ nav:hover a:hover {
     border-radius: 8px;
 }
 
+.fa-user {
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
 .filter-options {
     display: none;
     position: absolute;
@@ -83,12 +423,16 @@ nav:hover a:hover {
     padding: 3px;
     border-radius: 8px;
     z-index: 1;
+    width: 227px;
+    flex-shrink: 0;
 }
 
 .filter-options label {
     display: block;
     width: auto;
     cursor: pointer;
+    color: #000;
+    font-size: 16px;
 }
 
 .filter-options button {
@@ -99,6 +443,37 @@ nav:hover a:hover {
 
 .filter-container.active .filter-options {
     display: inline-block;
+}
+
+@media (max-width: 768px){
+    .barraBusquedaFiltros{
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+
+    .barrasFiltros,
+    .usuario{
+        position: fixed;
+        bottom: 0;
+        width: 50%;
+        height: 60px;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .barrasFiltros{
+        left: 0;
+        border-radius: 0;
+    }
+
+    .usuario{
+        right: 0;
+        border-radius: 0;
+    }
 }
 
 /*Precios*/
@@ -138,7 +513,7 @@ nav:hover a:hover {
     color: red;
     position: absolute;
     top: 49%;
-    left: 9.17%;
+    left: 8.2%;
     transform: translate(-50%, -50%);
     display: none;
     font-size: 22px;
@@ -210,6 +585,10 @@ nav:hover a:hover {
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid #ccc;
+
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 500px;
 }
 
 .barraBusqueda-box input[type="text"] {
@@ -217,8 +596,8 @@ nav:hover a:hover {
     padding: 8px 10px;
     flex-grow: 1;
     outline: none;
-    width: 500px;
-    min-width: auto;
+    min-width: 150px;
+    max-width: 500px;
 }
 
 .btnBuscar {
@@ -227,14 +606,7 @@ nav:hover a:hover {
     color: white;
     padding: 8px 12px;
     cursor: pointer;
-}
-
-.usuario {
-    padding: 0px 20px;
-    color: rgb(255, 255, 255);
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .usuario .fa-user {
@@ -247,48 +619,92 @@ nav:hover a:hover {
 }
 
 /*---Publicaciones---*/
-.publicaciones {
-}
-
-.container-publicaciones {
-    margin: 10px;
-    width: auto;
-    padding: 10px;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    flex-wrap: wrap;
+@media (min-width:768px) {
+    .contenedorPublicaciones {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr)
+    }
 }
 
 .publicacion {
-    margin: 0.5%;
-    font-size: 24px;
-    width: 250px;
-    height: 300px;
+    background-color: #eee;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 2rem;
 }
 
-.publicacion img {
-    width: 250px;
-    height: 200px;
+.publicacion .contenedorPublicaciones {
+    padding: 2rem;
 }
 
-.publicacion .tituloDepartamento{
+.publicacion h3,
+.publicacion p {
+    margin: 0;
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+    font-size: 3rem
+}
+
+.icionosCaracteristicasDepartamento {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    max-width: 40rem
+}
+
+.icionosCaracteristicasDepartamento li {
+    flex: 1;
+    display: flex
+}
+
+.icionosCaracteristicasDepartamento li img {
+    flex: 0 0 3rem;
+    margin-right: 1rem
+}
+
+.icionosCaracteristicasDepartamento li p {
+    font-weight: 900
+}
+
+.boton-verPropiedad {
+    background-color: #71b100;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    display: inline-block;
+    border: none
+}
+
+.boton-verPropiedad:hover {
+    background-color: #5f9601;
+    cursor: pointer
+}
+
+.boton-verPropiedad-block {
+    background-color: #71b100;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: 2.5rem;
     display: block;
-    margin: 2%;
-    font-size: 20px;
+    border: none
 }
 
-.publicacion .precioPublicacion{
-    display: block;
-    margin: 2%;
-    font-size: 20px;
+.boton-verPropiedad-block:hover {
+    background-color: #5f9601;
+    cursor: pointer
 }
 
 /*---Pie de pagina---*/
 footer {
-    background: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }

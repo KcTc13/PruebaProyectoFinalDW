@@ -6,18 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Indexstyles.css">
     <link rel="stylesheet" href="icons/fontawesome-free-6.7.2-web/css/all.min.css">
-    <link rel="stylesheet" href="css/diseñoTemp.css">
     <title>Pagina de renta de departamentos</title>
 </head>
 
 <body>
-    <header class="header">
-        <h1>Pagina de renta de departamentos</h1>
-        <nav class="barraDeNavergacion">
-            <li><a href="#">Iniciar sesion</a></li>
-            <li><a href="#">Registrarse</a></li>
-            <li><a href="#">Contanto</a></li>
-        </nav>
+    <header class="header inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/LogoRentaDepartamentosCopia.png" alt="Logo de renta de departamentos">
+                </a>
+
+                <div class="movilMenu">
+                    <img src="img/barras.svg" alt="icono menu">
+                </div>
+
+                <div class="derecha">
+                    <nav class="navegacion">
+                        <a href="#">Iniciar sesión</a>
+                        <a href="#">Registrarse</a>
+                        <a href="#">Contanto</a>
+                    </nav>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    eventListeners();
+                });
+
+                function eventListeners() {
+                    const mobileMenu = document.querySelector('.movilMenu');
+
+                    mobileMenu.addEventListener('click', navegacionResponsive);
+                }
+
+                function navegacionResponsive() {
+                    const navegacion = document.querySelector('.navegacion');
+
+                    navegacion.classList.toggle('mostrar')
+                }
+            </script>
+
+
+            <h1>Renta de Casas y Departamentos</h1>
+
+        </div>
     </header>
     <!--Pruebas-->
 
@@ -29,11 +63,11 @@
                 <button class="fa-solid fa-bars" onclick="toggleFilters()"></button>
                 <div class="filter-options">
                     <label for="precio" class="precio">Rango de precios:
-                        <label for="minPrecio" class="minPrecio">Minimo:</label>
-                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 2000">
+                        <label for="minPrecio" class="minPrecio">Minimo:
+                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 2000"></label>
 
-                        <label for="maxPrecio" class="maxPrecio">Maximo:</label>
-                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 10000">
+                        <label for="maxPrecio" class="maxPrecio">Maximo:
+                        <input type="number" id="precio" name="precio" min="1" placeholder="Ej: 10000"></label>
                     </label>
 
 
@@ -84,37 +118,111 @@
         </div>
     </section>
 
-    <section class="publicaciones">
+    <main class="contenedor seccion">
+        <h1>Más Sobre Nosotros</h1>
+    </main>
+
+    <section class="seccion contenedor">
         <p>Aqui mostraremos las imagenes de las publicaciones...</p>
-        <div class="container-publicaciones">
+        <div class="contenedorPublicaciones">
             <div class="publicacion">
-                <img src="img/departamento1.jpeg" alt="Imagen del departamento 1">
+                <picture>
+                    <img loading="lazy" src="img/departamento1.jpeg" alt="Imagen del departamento">
+                </picture>
+
                 <div class="contenidoPublicacion">
                     <h3>Departamento 1</h3>
                     <p>Breve descripcion de la publicacion</p>
                     <p class="precio">$5,500</p>
                     <ul class="icionosCaracteristicasDepartamento">
                         <li>
-                            <img class="icono" src="img/icono_dormitorio.svg"
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg"
                                 alt="Icono para represntar cantidad de dormitorios">
-                                <p>3</p>
+                            <p>3</p>
                         </li>
                         <li>
-                            <img class="icono" src="img/icono_estacionamiento.svg"
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg"
                                 alt="Icono para represntar cantidad de estacionamientos">
-                                <p>3</p>
+                            <p>3</p>
                         </li>
                         <li>
-                            <img class="icono" src="img/icono_wc.svg"
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg"
                                 alt="Icono para represntar cantidad de baños">
-                                <p>3</p>
+                            <p>3</p>
                         </li>
                     </ul>
+
+                    <a href="" class="boton-verPropiedad-block">
+                        Ver Propiedad
+                    </a>
                 </div>
             </div>
-            <div class="publicacion"></div>
-            <div class="publicacion"></div>
-            <div class="publicacion"></div>
+
+            <div class="publicacion">
+                <picture>
+                    <img loading="lazy" src="img/departamento2.jpg" alt="Imagen del departamento">
+                </picture>
+
+                <div class="contenidoPublicacion">
+                    <h3>Departamento 1</h3>
+                    <p>Breve descripcion de la publicacion</p>
+                    <p class="precio">$5,500</p>
+                    <ul class="icionosCaracteristicasDepartamento">
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg"
+                                alt="Icono para represntar cantidad de dormitorios">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg"
+                                alt="Icono para represntar cantidad de estacionamientos">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg"
+                                alt="Icono para represntar cantidad de baños">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="" class="boton-verPropiedad-block">
+                        Ver Propiedad
+                    </a>
+                </div>
+            </div>
+
+            <div class="publicacion">
+                <picture>
+                    <img loading="lazy" src="img/departamento3.jpeg" alt="Imagen del departamento">
+                </picture>
+
+                <div class="contenidoPublicacion">
+                    <h3>Departamento 1</h3>
+                    <p>Breve descripcion de la publicacion</p>
+                    <p class="precio">$5,500</p>
+                    <ul class="icionosCaracteristicasDepartamento">
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg"
+                                alt="Icono para represntar cantidad de dormitorios">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg"
+                                alt="Icono para represntar cantidad de estacionamientos">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg"
+                                alt="Icono para represntar cantidad de baños">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="" class="boton-verPropiedad-block">
+                        Ver Propiedad
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
