@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="icons/fontawesome-free-6.7.2-web/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header general">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/" class="logo">
+                    <img src="img/LogoRentaDepartamentosCopia.png" alt="Logo de renta de departamentos">
+                </a>
+
+                <div class="movilMenu">
+                    <img src="img/barras.svg" alt="icono menu">
+                </div>
+
+                <div class="derecha">
+                    <nav class="navegacion">
+                        <a href="#">Iniciar sesión</a>
+                        <a href="#">Registrarse</a>
+                        <a href="#">Contanto</a>
+                    </nav>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    eventListeners();
+                });
+
+                function eventListeners() {
+                    const mobileMenu = document.querySelector('.movilMenu');
+
+                    mobileMenu.addEventListener('click', navegacionResponsive);
+                }
+
+                function navegacionResponsive() {
+                    const navegacion = document.querySelector('.navegacion');
+
+                    navegacion.classList.toggle('mostrar')
+                }
+            </script>
+        </div>
+    </header>
+
+    <main class="mainPublicaciones">
+        <div class="publicacionCompleta">
+            <section class="galeria">
+                <img src="img/departamento1.jpeg" alt="">
+                <img src="img/departamento2.jpg" alt="">
+                <img src="img/departamento3.jpeg" alt="">
+                <img src="img/departamento4.jpg" alt="">
+                <img src="img/departamento5.jpg" alt="">
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

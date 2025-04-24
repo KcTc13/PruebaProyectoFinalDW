@@ -1,5 +1,5 @@
 body {
-    background-color: #ece8e0;
+    background-color: #a8a6a6;
     margin: 0;
 }
 
@@ -17,8 +17,4 @@ nav.barraDeNavergacion {
 
 .publicacion {
     border: 5px solid green;
-}
-
-footer{
-    background-color: #a8a6a6;
 }
