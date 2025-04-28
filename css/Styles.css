@@ -116,7 +116,7 @@ button::-moz-focus-inner {
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
 button:-moz-focusring {
-    outline: 1px dotted ButtonText;
+    outline: 1px dotted;
 }
 
 fieldset {
@@ -784,4 +784,185 @@ footer {
         opacity: 1;
         filter: contrast(110%);
     }
+
+}
+
+/* Contenedor principal centrado */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Caja de título */
+.login-title {
+    background-color: #5b9dee;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Caja de login */
+.login-box {
+    display: flex;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Imagen a la izquierda */
+.login-img {
+    width: 50%;
+    object-fit: cover;
+    height: auto;
+}
+
+/* Formulario a la derecha */
+.login-form {
+    width: 50%;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título del formulario */
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Icono de usuario */
+.icon-user {
+    font-size: 80px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Grupos de entrada */
+.input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-group input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+/* Recordar y Olvidar */
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Botón login */
+.login-form button {
+    background-color: #339CFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #0078d4;
+
+}
+
+
+/* Estilo del Modal */
+.modal {
+    display: none;
+    /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-detalles {
+    margin-top: 20px;
+}
+
+#modalCaracteristicas {
+    list-style: none;
+    padding: 0;
+}
+
+#modalCaracteristicas li {
+    margin-bottom: 10px;
 }
