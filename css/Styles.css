@@ -798,7 +798,7 @@ footer {
 
 /* Caja de título */
 .login-title {
-    background-color: #5b9dee;
+    background-color: #a8a6a6;
     width: 100%;
     text-align: center;
     padding: 20px 0;
@@ -893,7 +893,7 @@ footer {
 
 /* Botón login */
 .login-form button {
-    background-color: #339CFF;
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -904,15 +904,13 @@ footer {
 }
 
 .login-form button:hover {
-    background-color: #0078d4;
-
+    background-color: #2b772c;
 }
 
 
 /* Estilo del Modal */
 .modal {
     display: none;
-    /* Inicialmente oculto */
     position: fixed;
     z-index: 1;
     left: 0;
