@@ -841,7 +841,7 @@ footer {
 /* Icono de usuario */
 .icon-user {
     font-size: 80px;
-    color: #000;
+    color: #000000;
 }
 
 /* Grupos de entrada */
@@ -907,60 +907,102 @@ footer {
     background-color: #2b772c;
 }
 
+.mapa {
+    margin: 2rem 0;
+    text-align: center;
+}
 
-/* Estilo del Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.contenedor-mapa {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.valoraciones {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.valoracion {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    background-color: #fff;
+}
+
+.estrellas {
+    color: #FFD700; /* color dorado */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.comentario {
+    font-style: italic;
+    color: #555;
+}
+.fecha {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+.fecha i {
+    margin-right: 5px;
+    color: #555; /* opcional, cambia color del ícono */
+}
+
+
+
+.contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.info-contacto p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.info-contacto i {
+    margin-right: 8px;
+    color: #007BFF;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.modal-contenido {
-    position: relative;
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 700px;
-}
-
-.cerrar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #aaa;
+.formulario-contacto button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.cerrar:hover,
-.cerrar:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-imagen img {
-    width: 100%;
-    height: auto;
-}
-
-.modal-detalles {
-    margin-top: 20px;
-}
-
-#modalCaracteristicas {
-    list-style: none;
-    padding: 0;
-}
-
-#modalCaracteristicas li {
-    margin-bottom: 10px;
 }
